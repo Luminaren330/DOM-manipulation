@@ -1,72 +1,79 @@
-let qoute = document.querySelector('.qoute');
+let quote = document.querySelector('.quote');
 let person = document.querySelector('.person');
 let btn = document.querySelector('#new-quote');
 let btnadd = document.querySelector('#add-quote');
 let container = document.querySelector('.container');
-let count = 0;
+let condition = true;
 
-const qoutes = [{
-    qoute: "You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.",
+const quotes = [{
+    quote: "You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.",
     person: "Abraham Lincoln"
 }, {
-    qoute: "All the world’s a stage, and all the men and women merely players.",
+    quote: "All the world’s a stage, and all the men and women merely players.",
     person: "William Shakespeare"
 }, {
-    qoute: "Ask not what your country can do for you; ask what you can do for your country.",
+    quote: "Ask not what your country can do for you; ask what you can do for your country.",
     person: "John Kennedy"
 }, {
-    qoute: "Genius is one percent inspiration and ninety-nine percent perspiration.",
+    quote: "Genius is one percent inspiration and ninety-nine percent perspiration.",
     person: "Thomas Edison"
 }, {
-    qoute: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.",
+    quote: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.",
     person: "Martin Luther King"
 }, {
-    qoute: "If at first you don’t succeed, try, try again.",
+    quote: "If at first you don’t succeed, try, try again.",
     person: "W. E. Hickson"
 }, {
-    qoute: "If you are going through hell, keep going.",
+    quote: "If you are going through hell, keep going.",
     person: "Winston Churchill"
 }, {
-    qoute: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    quote: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
     person: "Albert Einstein"
 }, {
-    qoute: "That’s one small step for a man, a giant leap for mankind.",
+    quote: "That’s one small step for a man, a giant leap for mankind.",
     person: "Neil Armstrong"
 }, {
-    qoute: "Three can keep a secret, if two of them are dead.",
+    quote: "Three can keep a secret, if two of them are dead.",
     person: "Benjamin Franklin"
 }]
 
-// function AddNewQoute1() {
-//     if (count==0) { 
-//     var qoute1 = document.createElement("input");
-//     qoute1.type="Qoute";
-//     qoute1.className="text-field";
-//     qoute1.placeholder = "Qoute";
-//     var author = document.createElement("input");
-//     author.type="Qoute";
-//     author.className="text-field";
-//     author.placeholder = "Author";
-//     var submit = document.createElement("button");
-//     submit.innerHTML = "Add"
-//     submit.id = "add";
-//     container.appendChild(qoute1);
-//     container.appendChild(author);
-//     container.appendChild(submit);
-//     submit.addEventListener("click", function(qoute1,author) {
+function AddNewQuote1() {
+    if (condition)  { 
+    var quote1 = document.createElement("input");
+    quote1.type="quote";
+    quote1.className="text-field";
+    quote1.placeholder = "Quote";
 
-//     });
-//     }
-//     count++;
-// }
+    var author = document.createElement("input");
+    author.type="quote";
+    author.className="text-field";
+    author.placeholder = "Author";
 
-// let newqoute = {qoute: "Yes", person: "John"}
-// qoutes.push(newqoute);
-// console.log(qoutes);
+    var submit = document.createElement("button");
+    submit.innerHTML = "Add"
+    submit.id = "add";
 
+    container.appendChild(quote1);
+    container.appendChild(author);
+    container.appendChild(submit);
+
+    submit.addEventListener("click", function() {
+
+    let newquote = {quote: quote1.value, person: author.value}
+    quotes.push(newquote);
+    container.removeChild(submit);
+    container.removeChild(author);
+    container.removeChild(quote1);
+    condition=true;
+    console.log(condition);
+    console.log(quotes);
+    });
+    }
+    condition=false;
+}
 
 btn.addEventListener('click', function() {
-    let random = Math.floor(Math.random() * qoutes.length);
-    qoute.innerText = qoutes[random].qoute;
-    person.innerText = qoutes[random].person;
+    let random = Math.floor(Math.random() * quotes.length);
+    quote.innerText = quotes[random].quote;
+    person.innerText = quotes[random].person;
 });
