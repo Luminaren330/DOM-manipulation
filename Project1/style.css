@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('pexels-ricardo-esquivel-1907784.jpg') no-repeat center center/ cover;
+}
+.container { 
+    text-align: center;
+    width: 550px;
+    height: 600px;
+}
+.header {
+    margin: 50px auto;
+    width: 80%;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.main-content {
+    height: 300px;
+    position: relative;
+    border: 1px solid white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 0 10px;
+}
+
+.text-area {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.person {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    color: red;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+#new-quote {
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    vertical-align: bottom;
+}
+
+#new-quote:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+#add-quote {
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    vertical-align: bottom;
+}
+
+#add-quote:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.text-field {
+    width: 550px;
+}
+
+#add {
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#add:hover {
+    cursor: pointer;
+    background-color: gray;
+}
