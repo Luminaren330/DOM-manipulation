@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://img.freepik.com/free-vector/detailed-jungle-background_52683-62631.jpg?w=2000');
+    background-position: center;
+    background: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+#open-btn {
+    position: absolute;
+    width: 450px;
+    bottom: 15%;
+    left: 15%;
+    background: none;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    font-size: 2.7rem;
+    padding: 10px;
+    transition: 1s;
+}
+
+
+#open-btn:hover { 
+    cursor: pointer;
+    background: gray;
+    color: black;
+    border: none;
+}
+
+#model {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 2.5rem; 
+    background-color: steelblue;
+    width: 250px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+
+    animation-name: animatemodel;
+    animation-duration: 1s;
+}
+
+#close-btn {
+    font-size: 4rem;
+}
+
+#close-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#model-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes animatemodel { 
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}

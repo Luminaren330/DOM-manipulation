@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://img.freepik.com/premium-photo/background-texture-printed-question-marks_124595-213.jpg?w=2000') no-repeat center center/ cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.accordian {
+   width: 65%;
+   background-color: white;
+   padding: 30px;
+   border-radius: 30px;
+   margin-top: 200px;
+}
+
+h2 { 
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.question {
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.question:after {
+    content: '+';
+    position: absolute;
+    right: -5px;
+}
+
+.answear {
+    padding-top: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100%;
+
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+.active .answear {
+    height: 150px;
+}
+.active .question {
+    font-size: 15px;
+    transition: 1s;
+}
+
+.active .question:after {
+    content: '-';
+    font-size: 1.5rem;
+    transition: 1s;
+}
