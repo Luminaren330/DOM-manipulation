@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://wallpaperaccess.com/full/1090557.jpg') no-repeat center center/ cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 60%;
+    height: 250px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 0 3px;
+}
+
+#timer {
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 40px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    margin: 0 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+button i {
+    font-size: 5rem;
+    padding: 10px;
+    color: white;
+    width: 50px;
+}
+
+#play {
+    background-color: green;
+}
+
+#pause {
+    background-color: red;
+}
+
+#reset {
+    background-color: aqua;
+}
