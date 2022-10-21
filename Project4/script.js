@@ -45,7 +45,7 @@ function StopWatch() {
         leadingHours = hours;
     }
 
-    let displaytimer = document.getElementById('timer').innerText = leadingHours + ':' + leadingMinutes + ':' + leadingSeconds;
+    document.getElementById('timer').innerText = leadingHours + ':' + leadingMinutes + ':' + leadingSeconds;
 }
 
 // window.setInterval(StopWatch,1000);
